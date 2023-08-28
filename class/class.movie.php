@@ -39,25 +39,10 @@ class Movies
     
     public function __destruct()
     {
-        echo "End of Connection";
+     //   echo "End of Connection";
     }
 
 
   
   
 }
-$m =new Movies('1234','Yeni');
-echo $m->Movie_id.''.$m->Title ."<br/>";
-
-//Calling functions in class
-$m->setMovieDetails('Ken 123').'<br/>';
-echo $m->getMovieDetails().'<br/>';
-
-//Accessing static methods and properties
-echo Movies::$voteAge.'<br>';
-Movies::setVoteAge(20).'<br/>';
-
-//Accessing static function static from non static function
-echo Movies::$voteAge.'<br/>';
-Movies::setVoteAge(20);
-$m->getVoteAge();
