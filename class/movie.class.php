@@ -6,7 +6,7 @@ class Movies
     //properties / features of class & accessibility(private,public, protected)
     public $Movie_id = 'ABC';
     public $Title;
-    private $Duration;
+    public $Duration;
 
     public function __construct($Movie_id,$Title)
     {
@@ -16,9 +16,13 @@ class Movies
     }
     public function __destruct()
     {
-        echo "Destructor";
+        echo "End of Connection";
     }
 
+    public function setMovieDetails($Title)
+    {
+        $this->$Title =$Title;
+    }
   
 }
 $m =new Movies('1234','Yeni');
