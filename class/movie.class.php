@@ -27,6 +27,14 @@ class Movies
     //Static properties and methods
     public static $voteAge = 18;
 
+    public static function setVoteAge($newAge)
+    {
+        SELF::$voteAge =$newAge;
+    }
+    public static function getVoteAge()
+    {
+        return SELF::$voteAge;
+    }
     
     public function __destruct()
     {
@@ -46,4 +54,4 @@ echo $m->getMovieDetails().'<br/>';
 
 //Accessing static methods and properties
 echo Movies::$voteAge;
-?>
+Movies::setVoteAge(20);
