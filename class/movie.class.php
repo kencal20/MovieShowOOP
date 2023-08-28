@@ -24,7 +24,7 @@ class Movies
         $this->Title =$Title;
     }
 
-    public function getMovieDetails($Title)
+    public function getMovieDetails()
     {
        return $this->Title;
     }
@@ -36,7 +36,7 @@ echo $m->Movie_id.''.$m->Title ."<br/>";
 
 //Calling functions in class
 $m->setMovieDetails('Ken 123').'<br/>';
-echo $m->getMovieDetails($Title).'<br/>';
+echo $m->getMovieDetails().'<br/>';
 
 
 ?>
