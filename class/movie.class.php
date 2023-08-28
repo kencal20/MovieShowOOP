@@ -14,11 +14,6 @@ class Movies
      $this->$Title = $Title;
         
     }
-    public function __destruct()
-    {
-        echo "End of Connection";
-    }
-
     public function setMovieDetails($Title)
     {
         $this->Title =$Title;
@@ -28,6 +23,17 @@ class Movies
     {
        return $this->Title;
     }
+
+    //Static properties and methods
+    public static $voteAge = 18;
+
+    
+    public function __destruct()
+    {
+        echo "End of Connection";
+    }
+
+
   
   
 }
@@ -38,5 +44,6 @@ echo $m->Movie_id.''.$m->Title ."<br/>";
 $m->setMovieDetails('Ken 123').'<br/>';
 echo $m->getMovieDetails().'<br/>';
 
-
+//Accessing static methods and properties
+echo Movies::$voteAge;
 ?>
