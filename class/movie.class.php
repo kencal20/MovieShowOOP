@@ -31,7 +31,8 @@ class Movies
     {
         SELF::$voteAge =$newAge;
     }
-    public static function getVoteAge()
+    //pass static function static to non static function
+    public  function getVoteAge()
     {
         return SELF::$voteAge;
     }
@@ -55,3 +56,8 @@ echo $m->getMovieDetails().'<br/>';
 //Accessing static methods and properties
 echo Movies::$voteAge;
 Movies::setVoteAge(20);
+
+
+echo Movies::$voteAge(20);
+echo Movies::$VoteAge();
+$m->getVoteAge();
