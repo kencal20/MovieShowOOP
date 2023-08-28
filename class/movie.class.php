@@ -54,10 +54,10 @@ $m->setMovieDetails('Ken 123').'<br/>';
 echo $m->getMovieDetails().'<br/>';
 
 //Accessing static methods and properties
+echo Movies::$voteAge.'<br>';
+Movies::setVoteAge(20).'<br/>';
+
+//Accessing static function static from non static function
 echo Movies::$voteAge;
-Movies::setVoteAge(20);
-
-
-Movies::setVoteAge(20);
-echo Movies::$VoteAge();
+Movies::setVoteAge(20).'<br/>';
 $m->getVoteAge();
