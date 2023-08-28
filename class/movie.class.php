@@ -23,6 +23,12 @@ class Movies
     {
         $this->$Title =$Title;
     }
+
+    public function getMovieDetails($Title)
+    {
+       return $this->$Title;
+    }
+  
   
 }
 $m =new Movies('1234','Yeni');
