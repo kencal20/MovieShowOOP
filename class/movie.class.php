@@ -62,7 +62,6 @@ Movies::setVoteAge(20).'<br/>';
 echo Movies::$voteAge;
 Movies::setVoteAge(20).'<br/>';
 
-Movies::setVoteAge(20);
 
 //Accessing static function static from non static function
 echo Movies::$voteAge.'<br/>';
