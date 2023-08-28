@@ -58,6 +58,6 @@ echo Movies::$voteAge;
 Movies::setVoteAge(20);
 
 
-echo Movies::$voteAge(20);
+Movies::setVoteAge(20);
 echo Movies::$VoteAge();
 $m->getVoteAge();
