@@ -21,16 +21,22 @@ class Movies
 
     public function setMovieDetails($Title)
     {
-        $this->$Title =$Title;
+        $this->Title =$Title;
     }
 
     public function getMovieDetails($Title)
     {
-       return $this->$Title;
+       return $this->Title;
     }
   
   
 }
 $m =new Movies('1234','Yeni');
-echo $m->Movie_id.''.$m->Title;
+echo $m->Movie_id.''.$m->Title ."<br/>";
+
+//Calling functions in class
+$m->setMovieDetails('Ken 123').'<br/>';
+echo $m->getMovieDetails($Title).'<br/>';
+
+
 ?>
