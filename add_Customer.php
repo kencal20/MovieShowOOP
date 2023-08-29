@@ -7,7 +7,7 @@ include 'inc/header.php';
         <img src="logo.png" class="w-25 mb-3" alt="">
         <h2>Movie Show Ticketing System</h2>
         <p class="lead text-center">Add New Customer</p>
-        <form action="" class="mt-4 w-75">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" class="mt-4 w-75" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Customer Name</label>
                 <input type="text" class="form-control" id="c_name" name="_name">
