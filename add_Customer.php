@@ -1,5 +1,5 @@
 <?php
-include 'inc/header.php';
+ include 'inc/header.php';
 include 'class/class.customer.php';
 
 //Store Textboxes into variables
