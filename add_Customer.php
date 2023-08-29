@@ -1,23 +1,19 @@
 <?php
- include 'inc/header.php';
+include 'inc/header.php';
 include 'class/class.customer.php';
 
 //Store Textboxes into variables
 $c_name = FILTER_INPUT(INPUT_POST, 'c_name', FILTER_SANITIZE_SPECIAL_CHARS);
 $c_date = FILTER_INPUT(INPUT_POST, 'c_date', FILTER_SANITIZE_SPECIAL_CHARS);
 $c_addr = FILTER_INPUT(INPUT_POST, 'c_addr', FILTER_SANITIZE_SPECIAL_CHARS);
-        $NewCustomer= new Customer();
-        if(isset($_POST['add_newCustomer']))
-        {
-          if(  $NewCustomer ->add_customer($c_name,$c_date,$c_addr))
-          {
-            echo "New Customer Added";
-          }
-          else
-          {
-            echo "Not Added".Mysqli_error($NewCustomer->connectdb());
-          }
-        }
+$NewCustomer = new Customer();
+if (isset($_POST['add_newCustomer'])) {
+    if ($NewCustomer->add_customer($c_name, $c_date, $c_addr)) {
+        echo "New Customer Added";
+    } else {
+        echo "Not Added" . Mysqli_error($NewCustomer->connectdb());
+    }
+}
 ?>
 <main>
     <div class="container d-flex flex-column align-items-center">
