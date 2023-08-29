@@ -1,6 +1,7 @@
 <?php
 include 'inc/header.php';
 include 'class/class.customer.php';
+$NewCustomer = new Customer();
 
 //Store Textboxes into variables
 $c_name = FILTER_INPUT(INPUT_POST, 'c_name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -17,7 +18,7 @@ if (isset($_POST['add_newCustomer'])) {
         <img src="logo.png" class="w-25 mb-3" alt="">
         <h2>Movie Show Ticketing System</h2>
         <p class="lead text-center">Add New Customer</p>
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="mt-4 w-75" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>"  method="post" class="mt-4 w-75">
             <div class="mb-3">
                 <label for="name" class="form-label">Customer Name</label>
                 <input type="text" class="form-control" id="c_name" name="_name">
@@ -31,7 +32,7 @@ if (isset($_POST['add_newCustomer'])) {
                 <textarea type="Date" class="form-control" id="c_addr" name="c_addr"></textarea>
             </div>
             <div class="mb-3">
-                <input type="submit" name="Create Show" value="Create Show" class="btn btn-dark w-100">
+                <input type="submit" name="'add_newCustomer" value="Create Show" class="btn btn-dark w-100">
             </div>
         </form>
     </div>
