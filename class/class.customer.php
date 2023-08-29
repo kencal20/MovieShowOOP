@@ -9,5 +9,6 @@ class Customer extends config
         $sql = 'insert into Customer(FullName,DOB,Address) values(?,?,?)';
         $query = $this->connectdb()->prepare($sql);
         $query->execute([$Name,$DoB, $Addr]);
+        $Customer = $query->fetchAll();
     }
 }
