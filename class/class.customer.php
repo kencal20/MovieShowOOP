@@ -1,14 +1,13 @@
 <?php
 
-    include 'class.config.php';
+include 'class.config.php';
 
-    class Customer extends config
+class Customer extends config
 {
-     public function add_customer( $Name,$DoB,$Addr)
+    public function add_customer($Name, $DoB, $Addr)
     {
-        $sql='insert into Customer(FullName,DOB,Address) values(?,?,?)';
-        $query =$this->connectdb()->prepare($sql);
+        $sql = 'insert into Customer(FullName,DOB,Address) values(?,?,?)';
+        $query = $this->connectdb()->prepare($sql);
+        $query->execute([$Name,$DoB, $Addr]);
     }
 }
-
-?>
