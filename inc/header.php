@@ -1,5 +1,5 @@
 <?php
-    require_once '../class/class.config.php';
+    include '../class/class.config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
